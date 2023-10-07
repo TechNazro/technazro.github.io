@@ -1,5 +1,4 @@
 const slogans = [
-    "Where science and Sanatana Dharma meet.",
     "Exploring the intersection of spirituality and technology.",
     "Finding meaning and purpose in the modern world with Sanatana Dharma.",
     "Using technology to promote spiritual growth.",
@@ -21,14 +20,27 @@ const slogans = [
     "Sanatana Dharma for the next generation."
 ];
 
+
+const colors = {
+    "red": "black",
+    "purple": "white",
+    "yellow": "black",
+    "lime": "black",
+    "dodgerblue": "black",
+};
+
+
 let currentSlide = 0;
+
+let currentBackgroundColor = 0;
+let currentFontColor = 0;
 
 let showNextSlide = function () {
     currentSlide++;
+
     if (currentSlide >= slogans.length) {
         currentSlide = 0;
     }
-
     document.querySelector(".slide").innerHTML = slogans[currentSlide];
 }
 
